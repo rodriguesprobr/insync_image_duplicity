@@ -37,5 +37,5 @@ def rm(type, path):
 			if file_a != file_b:
 				if filecmp.cmp(str(path + "/" + file_a.name), str(path + "/" + file_b.name)):
 					if type == "stdout":
-						print("rm " + path + "/" + file_b.name)
+						print("rm -f  " + path.replace(" ", "\\ ").replace("(", "\\(").replace(")", "\\)") + "/" + file_b.name.replace(" ", "\\ ").replace("(", "\\(").replace(")", "\\)"))
 					files.remove(file_b)
