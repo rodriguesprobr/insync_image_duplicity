@@ -34,5 +34,5 @@ def compare(files, path):
                     print("rm -f  " + \
                         path.replace("'", "\'").replace(" ", "\ ").replace("(", "\(").replace(")", "\)") + \
                         "/" + \
-                        file_b.replace("'", "\'").name.replace(" ", "\ ").replace("(", "\(").replace(")", "\)"))
+                        file_b.name.replace("'", "\'").replace(" ", "\ ").replace("(", "\(").replace(")", "\)"))
                     files.remove(file_b)
